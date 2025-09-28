@@ -1,0 +1,97 @@
+# Alacritty config - minimal, fast, readable
+
+[window]
+padding = { x = 10, y = 10 }
+opacity = 0.95
+dynamic_title = true
+
+[font]
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
+bold = { family = "Hack Nerd Font Mono", style = "Bold" }
+italic = { family = "Hack Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "Hack Nerd Font Mono", style = "Bold Italic" }
+size = 11.0
+
+[colors.primary]
+background = '#191724'  # Rose Pine background
+foreground = '#e0def4'  # Rose Pine foreground
+
+[colors.cursor]
+text = '#191724'
+cursor = '#524f67'
+
+[colors.vi_mode_cursor]
+text = '#191724'
+cursor = '#524f67'
+
+[colors.search.matches]
+foreground = '#191724'
+background = '#f6c177'
+
+[colors.search.focused_match]
+foreground = '#191724'
+background = '#ebbcba'
+
+[colors.normal]
+black = '#26233a'
+red = '#eb6f92'
+green = '#31748f'
+yellow = '#f6c177'
+blue = '#9ccfd8'
+magenta = '#c4a7e7'
+cyan = '#ebbcba'
+white = '#e0def4'
+
+[colors.bright]
+black = '#6e6a86'
+red = '#eb6f92'
+green = '#31748f'
+yellow = '#f6c177'
+blue = '#9ccfd8'
+magenta = '#c4a7e7'
+cyan = '#ebbcba'
+white = '#e0def4'
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+vi_mode_style = { shape = "Block", blinking = "Off" }
+
+[selection]
+save_to_clipboard = true
+
+[terminal.shell]
+program = "/bin/bash"
+args = ["--login"]
+
+# Key bindings for common operations
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[terminal]
