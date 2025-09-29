@@ -1,0 +1,66 @@
+/* ~/.config/waybar/style.css */
+* {
+    font-family: "Hack Nerd Font Mono";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: #1f1d2e;  /* Rose Pine surface */
+    color: #e0def4;  /* Rose Pine text */
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #908caa;  /* Rose Pine subtle */
+    min-width: 20px;
+}
+
+#workspaces button.active {
+    background-color: #c4a7e7;  /* Rose Pine iris */
+    color: #191724;  /* Rose Pine base */
+}
+
+#workspaces button.urgent {
+    background-color: #eb6f92;  /* Rose Pine love */
+    color: #191724;
+}
+
+#workspaces button:hover {
+    background-color: #403d52;  /* Rose Pine highlight */
+    color: #e0def4;
+}
+
+#window {
+    padding: 0 10px;
+    color: #e0def4;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #backlight {
+    padding: 0 10px;
+    color: #e0def4;
+    background-color: #26233a;  /* Rose Pine overlay */
+    margin: 3px 2px;
+}
+
+#battery.charging {
+    color: #31748f;  /* Rose Pine pine */
+}
+
+#battery.warning:not(.charging) {
+    color: #f6c177;  /* Rose Pine gold */
+}
+
+#battery.critical:not(.charging) {
+    color: #eb6f92;  /* Rose Pine love */
+}
+
+#network.disconnected {
+    color: #eb6f92;
+}
+
+#pulseaudio.muted {
+    color: #6e6a86;  /* Rose Pine muted */
+}

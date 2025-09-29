@@ -1,0 +1,100 @@
+/* -------- Rose Pine + purple accent, no blue highlights -------- */
+
+* {
+  /* Rose Pine palette */
+  bg:      #191724;
+  bg-alt:  #1f1d2e;
+  fg:      #e0def4;
+  fg-alt:  #908caa;
+  accent:  #c4a7e7;   /* your purple */
+  urgent:  #eb6f92;
+
+  background-color: @bg;
+  text-color:       @fg;
+  border-color:     @accent;
+}
+
+/* Window */
+window {
+  width: 600px;
+  padding: 0;
+  border: 2px;
+  border-color: @accent;
+}
+
+/* Layout containers */
+mainbox {
+  padding: 0;
+  background-color: @bg;
+}
+
+/* Top input area */
+inputbar {
+  padding: 10px;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+prompt {
+  padding: 0 10px 0 0;
+  background-color: @bg-alt;
+  text-color: @accent;
+}
+entry {
+  background-color: @bg-alt;
+  text-color: @fg;
+  placeholder-color: @fg-alt;
+}
+
+/* List */
+listview {
+  padding: 10px;
+  scrollbar: false;
+  background-color: @bg;
+}
+
+/* Rows */
+element {
+  padding: 5px 10px;
+  background-color: @bg;
+  text-color: @fg-alt;
+}
+
+/* Alternate row (kill the off-white) */
+element alternate,
+element.alternate {
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+/* Urgent rows */
+element urgent,
+element.urgent {
+  background-color: @urgent;
+  text-color: @bg;
+}
+
+/* --- HARD OVERRIDES: kill the blue selection in all states --- */
+/* (covers rofi 1.x and 2.x selector syntaxes) */
+element selected,
+element.selected,
+element selected normal,  element.selected.normal,
+element selected active,  element.selected.active,
+element selected urgent,  element.selected.urgent,
+element-text selected,    element-text.selected,
+element-icon selected,    element-icon.selected {
+  /* Soft purple wash. If you want solid, swap for: background-color: @accent; text-color: @bg; */
+  background-color: rgba(196,167,231,0.22);
+  text-color: @fg;
+  border: 0 0 0 2px;
+  border-color: @accent;
+}
+
+/* Matched-text highlight color inside rows */
+element-text { highlight: @accent; }
+
+/* Icon sizing/spacing for drun */
+element-icon {
+  size: 1.1em;          /* tweak 1.0–1.3em to taste */
+  margin: 0 8px 0 0;
+}
+

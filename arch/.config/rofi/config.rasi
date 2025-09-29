@@ -1,0 +1,20 @@
+configuration {
+  modi: "drun,run,window";
+  font: "Hack Nerd Font Mono 11";
+
+  /* Icons */
+  show-icons: true;
+  icon-theme: "Papirus";
+
+  /* Labels / formats */
+  display-drun: "Apps";
+  display-run: "Run";
+  display-window: "Window";
+  drun-display-format: "{name}";
+  window-format: "{w} {c} {t}";
+}
+
+/* Point to the theme file below */
+@theme "~/.config/rofi/theme.rasi"
+
+
